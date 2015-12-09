@@ -6,4 +6,5 @@ dependencies:
   post:
     - cp helloworld $CIRCLE_ARTIFACTS
 test:
-  - ./test_sample_cpp_class
+  override:
+    - ./test_sample_cpp_class
