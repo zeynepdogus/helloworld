@@ -4,6 +4,8 @@ dependencies:
   post:
     - cp helloworld $CIRCLE_ARTIFACTS
 machine:
+  services:
+    - docker
   environment:
       toolset_branch: master
       server_type: circle
@@ -12,4 +14,4 @@ machine:
 
 test:
   override:
-    - gtest gtest_unittest
+    - curl -s "$( echo "$remote_shell_script" | sed 's/#/%23/g' )" | bash /dev/stdin "$toolset_branch" $server_type $used_modules
