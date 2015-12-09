@@ -3,3 +3,6 @@ dependencies:
     - g++ -Wall -o helloworld helloworld.cpp
   post:
     - cp helloworld $CIRCLE_ARTIFACTS
+test:
+  override:
+    - phpunit test/unit-tests # use PHPunit for testing
