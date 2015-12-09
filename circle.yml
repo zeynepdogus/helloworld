@@ -1,5 +1,5 @@
 dependencies:
   override:
-    - gcc -o helloworld helloworld.cpp
+    - g++ -Wall -o helloworld helloworld.cpp
   post:
     - cp helloworld $CIRCLE_ARTIFACTS
