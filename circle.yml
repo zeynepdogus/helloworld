@@ -3,7 +3,4 @@ dependencies:
     - g++ -Wall -o helloworld helloworld.cpp
   post:
     - cp helloworld $CIRCLE_ARTIFACTS
-## Customize test commands
-test:
-  override:
-    - gtest
+
