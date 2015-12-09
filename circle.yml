@@ -5,4 +5,5 @@ dependencies:
     - cp helloworld $CIRCLE_ARTIFACTS
 test:
   override:
-    - phpunit test/unit-tests # use PHPunit for testing
+    - g++ -Wall -o test_sample_cpp_class test_sample_cpp_class.cpp
+  ./test_sample_cpp_class
