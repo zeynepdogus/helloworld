@@ -1,9 +1,9 @@
 dependencies:
   override:
     - g++ -Wall -o helloworld helloworld.cpp
+    - g++ -Wall -o test_sample_cpp_class test_sample_cpp_class.cpp
+
   post:
     - cp helloworld $CIRCLE_ARTIFACTS
 test:
-  override:
-    - g++ -Wall -o test_sample_cpp_class test_sample_cpp_class.cpp
   - ./test_sample_cpp_class
